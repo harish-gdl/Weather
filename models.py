@@ -6,7 +6,7 @@ from torch_geometric.nn import (
     GATConv,
     )
 
-def get_model(model_name, num_features, num_classes, edge_index, edge_attr, x, mask=None):
+def get_model(model_name, num_features, num_classes, edge_index, edge_attr, x, hidden_dim, dropout=float, mask=None):
     if model_name =="gcn":
         return GCN(
             num_features=num_features,
